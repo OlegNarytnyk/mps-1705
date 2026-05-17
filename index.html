@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#07070f" />
+  <title>Моїй Мапусі ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="rain-canvas"></canvas>
+
+  <div id="intro-screen">
+    <div class="intro-content">
+      <div class="intro-hearts" aria-hidden="true">♡ ♡ ♡</div>
+      <p class="intro-label">Тут щось цікавеньке для тебе сонечко</p>
+      <div id="intro-countdown" aria-live="polite">3</div>
+      <button id="start-surprise-btn" class="start-surprise-btn hidden" type="button">Цю кнопочку натискати ♡</button>
+    </div>
+  </div>
+
+  <div id="video-overlay">
+    <video id="intro-video" playsinline muted preload="auto">
+      <source src="media/intro-video.mp4" type="video/mp4" />
+    </video>
+    <p id="video-reveal-text">Присвячується моїй коханій Мапусі</p>
+    <button id="music-prompt" class="hidden">Тицьни тут будь ласка ♡</button>
+  </div>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="media/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main id="main-content" class="hidden">
+
+    <section id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div id="floating-hearts" aria-hidden="true"></div>
+      <div class="hero-text">
+        <h1 class="title">З нашим прешим рочкоооом!!!</h1>
+        <p class="subtitle">Моїй найпрекраснішій Бусінці!</p>
+        <p class="hero-quote">"Кожен момент з тобою був просто найкращим з усього що зі мною сталося"</p>
+      </div>
+    </section>
+
+    <section id="timer-section">
+      <h2 class="section-title">Разом…</h2>
+      <div class="timer-grid" role="timer" aria-live="polite">
+        <div class="timer-block">
+          <span class="timer-value" id="t-years">0</span>
+          <span class="timer-label">Years</span>
+        </div>
+        <div class="timer-block">
+          <span class="timer-value" id="t-months">0</span>
+          <span class="timer-label">Months</span>
+        </div>
+        <div class="timer-block">
+          <span class="timer-value" id="t-days">00</span>
+          <span class="timer-label">Days</span>
+        </div>
+        <div class="timer-block">
+          <span class="timer-value" id="t-hours">00</span>
+          <span class="timer-label">Hours</span>
+        </div>
+        <div class="timer-block">
+          <span class="timer-value" id="t-minutes">00</span>
+          <span class="timer-label">Minutes</span>
+        </div>
+        <div class="timer-block">
+          <span class="timer-value" id="t-seconds">00</span>
+          <span class="timer-label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="messages-section">
+      <h2 class="section-title">Ти мій всесвіт!</h2>
+      <div class="cards-grid">
+        <div class="card reveal-card">
+          <span class="card-icon" aria-hidden="true">♡</span>
+          <p class="card-text">Ти зробила мій світ яскравішим.</p>
+        </div>
+        <div class="card reveal-card">
+          <span class="card-icon" aria-hidden="true">✦</span>
+          <p class="card-text">Ти мій спокій, моя посмішка, моя мотивація, моя найкраща людинка.</p>
+        </div>
+        <div class="card reveal-card">
+          <span class="card-icon" aria-hidden="true">♡</span>
+          <p class="card-text">Я завжди буду вибирати тебе і лише тебе.</p>
+        </div>
+        <div class="card reveal-card">
+          <span class="card-icon" aria-hidden="true">✦</span>
+          <p class="card-text">З тобою світ є те справжнє відчуття дому котре не описати словами.</p>
+        </div>
+        <div class="card reveal-card">
+          <span class="card-icon" aria-hidden="true">♡</span>
+          <p class="card-text">Ти є міх подих того немовірного щастя.</p>
+        </div>
+        <div class="card reveal-card">
+          <span class="card-icon" aria-hidden="true">✦</span>
+          <p class="card-text">Дякую що ти завжди поруч зі мною у моєму сердечку!.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos-section">
+      <h2 class="section-title">Our moments</h2>
+      <div class="photo-grid">
+        <div class="photo-card reveal-card">
+          <div class="photo-wrap">
+            <div class="photo-placeholder" aria-hidden="true">♡</div>
+            <img src="images/IMG_8979.JPG" alt="Our photo 1" loading="lazy" />
+          </div>
+          <p class="photo-caption">Моє найбільше захоплення ♡</p>
+        </div>
+        <div class="photo-card reveal-card">
+          <div class="photo-wrap">
+            <div class="photo-placeholder" aria-hidden="true">♡</div>
+            <img src="images/IMG_6519.jpg" alt="Our photo 2" loading="lazy" />
+          </div>
+          <p class="photo-caption">Моя улюблена посмішка</p>
+        </div>
+        <div class="photo-card reveal-card">
+          <div class="photo-wrap">
+            <div class="photo-placeholder" aria-hidden="true">♡</div>
+            <img src="images/IMG_9775.JPG" alt="Our photo 3" loading="lazy" />
+          </div>
+          <p class="photo-caption">Емоції разом</p>
+        </div>
+        <div class="photo-card reveal-card">
+          <div class="photo-wrap">
+            <div class="photo-placeholder" aria-hidden="true">♡</div>
+            <img src="images/IMG_6947.JPG" alt="Our photo 4" loading="lazy" />
+          </div>
+          <p class="photo-caption">Моя найпрекрасніша квіточка</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline-section">
+      <h2 class="section-title">Наша маленька історія</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>День коли все почалося</h3>
+            <p>Цей день який перевернув моє життя повністю і лише у кращу сторону, день коли я снідав на кухні і отримав це маленьке повідомлення, котре із повної невідомості прзвело до чогось прекрасного чогось неймовірного...</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Наше перше люблю</h3>
+            <p>Як казав я спочатку це безмежно важкі для мене слова, адже слово "люблю" це не просто слова, а справді великі відчуття. Але ніколи не міг до цього подумати, що слова люблю та кохаю може справді бути замало...</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Перший поцілунок</h3>
+            <p>Це був справді найнеймовіший день у моєму житті котрий справді був вартий всього, кожної тої секунди з тобою, коли я просто не міг перестти любуватися тобою, аж до поки не стався він той перший, той неймовірний поцілуночок, котрий справді був у саме серце </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Наші перші пригодки </h3>
+            <p>Той момент коли коли всі відчуття навлишнього світу просто відйшли назад і нічого ніби не існувало окрім нас, і хотілося просто зануритися у цей всесвіт з тобою, ніколи його не покидати</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Довга довга відстань </h3>
+            <p>Як б не здавався цей період важкий, та довгий, це всеодно чатина нашої спільної історії, корий приніс і приносить нас багато уроків, та багато випробувань, але найважливіше ціль до котрої ми разом ідемо, адже ми ніколи нізащо не здамося</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Наша перша велика датка </h3>
+            <p>Хоч і мусимо цю датку ми проводити на жаль на відстані, проте буде у нас ше просто міліон таких насправді дат, котрі ми ще не раз справді разом зможемо відствяткувати, варто завжди розуміти що навіть за 6000 км ми разом і подолаємо всі відстані</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="final-section">
+      <div class="final-heart" aria-hidden="true">❤</div>
+      <p class="final-text">Я люблю тебе більше ніж просто слова можуть описати, адже ми разом і назавжди!</p>
+      <div class="forever-question" aria-live="polite">
+        <h2>Я тебе більше кохаю і це правда?</h2>
+        <div class="forever-actions">
+          <button id="yes-btn" class="forever-btn yes-btn" type="button">Так ♡</button>
+          <button id="no-btn" class="forever-btn no-btn" type="button">Ні</button>
+        </div>
+        <p id="yes-message" class="yes-message">Я так і знав, що я насправді тебе більше, і просто БЕЗМЕЖНОООООО ♡</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
